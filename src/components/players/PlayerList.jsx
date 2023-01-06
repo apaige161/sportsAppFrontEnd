@@ -1,6 +1,5 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
-import addDays from "date-fns/addDays";
 import moment from "moment";
 
 
@@ -57,16 +56,16 @@ export default function PlayerList({ players }) {
       });
     }
 
-    const numOfDaysToSearch = 14;
+    const numOfDaysToSearch = 7;
     function renderWeekOfGamePlayers() {
       let dateTime = new Date();
       let daysToCheck = [];
 
       // add days to array
       for (let i = 0; i < numOfDaysToSearch; i++) {
-        let dayToAdd = moment(dateTime, "DD-MM-YY")
+        let dayToAdd = moment(dateTime, "MM-DD-YY")
           .add(i, "d")
-          .format("DD-MM-YY");
+          .format("MM-DD-YY");
 
         dayToAdd = dayToAdd.replaceAll("-", "/");
         daysToCheck.push(dayToAdd);
@@ -97,9 +96,5 @@ export default function PlayerList({ players }) {
       });
     }
     
-  return (
-    <div>
-      {renderWeekOfGamePlayers()}
-    </div>
-  );
+  return <div>{renderWeekOfGamePlayers()}</div>;
 }

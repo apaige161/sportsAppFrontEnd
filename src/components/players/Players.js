@@ -28,6 +28,9 @@ export default function Players() {
     <div>
       {/* <PlayerForm getPlayers={getPlayers} /> */}
       <h3>Two week filter</h3>
+      <button>NFL Only</button>
+      <button>NBA Only</button>
+      <button>NHL Only</button>
       <PlayerList players={players} />
     </div>
   );
