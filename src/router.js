@@ -3,9 +3,10 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
-import Navbar from './components/layout/Navbar'
+import NavbarComponent from "./components/layout/Navbar";
 import Customers from './components/customers/Customers';
 import Players from "./components/players/Players";
+import PlayerInjury from "./components/injuries/Injuries";
 
 import AuthContext from './Context/AuthContext';
 import Tickets from './components/lottery/lotteryTickets';
@@ -19,10 +20,12 @@ export default function Router() {
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <NavbarComponent />
       <Switch>
         <Route exact path="/">
-          <div>Home</div>
+          <div>
+            Home, TODO: Add Home component
+          </div>
         </Route>
         {loggedIn === false && (
           <>
@@ -42,6 +45,9 @@ export default function Router() {
             </Route>
             <Route path="/playerBirthday">
               <Players />
+            </Route>
+            <Route path="/injuryReport">
+              <PlayerInjury />
             </Route>
             <Route path="/lotteryTickets">
               <Tickets />
