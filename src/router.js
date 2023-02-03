@@ -7,6 +7,7 @@ import NavbarComponent from "./components/layout/Navbar";
 import Customers from './components/customers/Customers';
 import Players from "./components/players/Players";
 import PlayerInjury from "./components/injuries/Injuries";
+import AskAi from './components/chatGPT/AskAi';
 
 import AuthContext from './Context/AuthContext';
 import Tickets from './components/lottery/lotteryTickets';
@@ -23,9 +24,7 @@ export default function Router() {
       <NavbarComponent />
       <Switch>
         <Route exact path="/">
-          <div>
-            Home, TODO: Add Home component
-          </div>
+          <div>Home, TODO: Add Home component</div>
         </Route>
         {loggedIn === false && (
           <>
@@ -51,6 +50,9 @@ export default function Router() {
             </Route>
             <Route path="/lotteryTickets">
               <Tickets />
+            </Route>
+            <Route path="/askai">
+              <AskAi />
             </Route>
           </>
         )}

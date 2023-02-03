@@ -53,6 +53,9 @@ export default function NavbarComponent() {
                 <Nav.Link as={Link} to="/lotteryTickets">
                   Lottery Tickets
                 </Nav.Link>
+                <Nav.Link as={Link} to="/askai">
+                  Ask AI
+                </Nav.Link>
               </>
             )}
           </Nav>
