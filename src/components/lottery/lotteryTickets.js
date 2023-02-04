@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 // import CustomerForm from './CustomerForm'
 import LotteryTicketList from "./lotteryTicketList";
 
+import Container from "react-bootstrap/Container";
+
 export default function Tickets() {
 
     const [tickets, setTickets] = useState([]);
@@ -25,8 +27,9 @@ export default function Tickets() {
 
   return (
     <div>
-      {/* <CustomerForm getLotteryTickets={getLotteryTickets} /> */}
-      <LotteryTicketList tickets={tickets} />
+      <Container class="d-flex justify-content-center">
+        <LotteryTicketList tickets={tickets} />
+      </Container>
     </div>
   );
 }

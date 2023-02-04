@@ -1,15 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-// import FootballPlayerList from "./FootballList";
-// import BasketballPlayerList from "./BasketballList";
-// import HockeyPlayerList from "./HockeyList";
+import PlayerList from './PlayerList';
 
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 // import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
-import PlayerList from './PlayerList';
+
 
 
 
@@ -44,8 +42,6 @@ export default function Players() {
 
   return (
     <div>
-      <h3 class="d-flex justify-content-center">One week filter</h3>
-
       <Container class="d-flex justify-content-center">
         <div>
           <label>

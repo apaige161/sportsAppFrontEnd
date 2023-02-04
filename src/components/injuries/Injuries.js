@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import InjuryPlayerList from "./InjuryList";
 
+import Container from "react-bootstrap/Container";
+
 export default function PlayerInjury() {
 
     const [players, setPlayers] = useState([]);
@@ -35,33 +37,25 @@ export default function PlayerInjury() {
 
   return (
     <div>
-      <h2>Injury Report</h2>
+      <Container class="d-flex justify-content-center">
+        <h2>Injury Report</h2>
+        <div>
+          <label>
+            <select value={sport} onChange={SportSelectDropdown}>
+              <option value="football">Football</option>
+              <option value="basketball">Basketball</option>
+              <option value="hockey">Hockey</option>
+            </select>
+          </label>
+        </div>
 
-      <div>
-        <label>
-          <select value={sport} onChange={SportSelectDropdown}>
-            <option value="football">Football</option>
-            <option value="basketball">Basketball</option>
-            <option value="hockey">Hockey</option>
-          </select>
-        </label>
-      </div>
-
-      {/* <div>
-        <label>
-          <select value={team} onChange={TeamSelectDropdown}>
-            <option value="football">Football</option>
-            <option value="basketball">Basketball</option>
-            <option value="hockey">Hockey</option>
-          </select>
-        </label>
-      </div> */}
-
-      <InjuryPlayerList
-        players={players}
-        targetSport={sport}
-        targetTeam={team}
-      />
+        <InjuryPlayerList
+          players={players}
+          targetSport={sport}
+          targetTeam={team}
+        />
+      </Container>
     </div>
   );
 }
+

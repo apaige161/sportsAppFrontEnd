@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 
 
 export default function AskAi() {
@@ -28,22 +29,24 @@ export default function AskAi() {
 
     return (
       <div>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label>Ask AI</Form.Label>
-            <Form.Control
-              placeholder="Who will win the super bowl?"
-              as="textarea"
-              rows={3}
-              value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
-            />
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form.Group>
-        </Form>
-        <p>Chat-GPT Answer: {response}</p>
+        <Container class="d-flex justify-content-center">
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label>Ask AI</Form.Label>
+              <Form.Control
+                placeholder="Who will win the super bowl?"
+                as="textarea"
+                rows={3}
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
+              />
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Form.Group>
+          </Form>
+          <p>{response}</p>
+        </Container>
       </div>
     );
 }
