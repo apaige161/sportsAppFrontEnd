@@ -28,17 +28,6 @@ export default function Router() {
         </Route>
         {loggedIn === false && (
           <>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-          </>
-        )}
-
-        {loggedIn === true && (
-          <>
             <Route path="/customer">
               <Customers />
             </Route>
@@ -51,6 +40,17 @@ export default function Router() {
             <Route path="/lotteryTickets">
               <Tickets />
             </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+          </>
+        )}
+
+        {loggedIn === true && (
+          <>
             <Route path="/askai">
               <AskAi />
             </Route>

@@ -36,6 +36,15 @@ export default function NavbarComponent() {
                 <Nav.Link as={Link} to="/login">
                   Login
                 </Nav.Link>
+                <Nav.Link as={Link} to="/playerBirthday">
+                  Birthdays
+                </Nav.Link>
+                <Nav.Link as={Link} to="/injuryReport">
+                  Injury Report
+                </Nav.Link>
+                <Nav.Link as={Link} to="/lotteryTickets">
+                  Lottery Tickets
+                </Nav.Link>
               </>
             )}
 
