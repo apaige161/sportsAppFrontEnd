@@ -51,6 +51,18 @@ export default function Router() {
 
         {loggedIn === true && (
           <>
+            <Route path="/customer">
+              <Customers />
+            </Route>
+            <Route path="/playerBirthday">
+              <Players />
+            </Route>
+            <Route path="/injuryReport">
+              <PlayerInjury />
+            </Route>
+            <Route path="/lotteryTickets">
+              <Tickets />
+            </Route>
             <Route path="/askai">
               <AskAi />
             </Route>
