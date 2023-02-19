@@ -13,33 +13,30 @@ import Container from "react-bootstrap/Container";
 
 
 export default function Players() {
+  const [players, setPlayers] = useState([]);
+  const [sport, setSport] = useState("basketball");
+  const [toleranceDays, setToleranceDays] = useState("7");
 
-    const [players, setPlayers] = useState([]);
-    const [sport, setSport] = useState('basketball')
-    const [toleranceDays, setToleranceDays] = useState('7')
+  // Load all players -> then pass players to the playerList
+  async function getPlayers() {
+    const playersRes = await axios.get(
+      "https://sports-app.herokuapp.com/playerBirthday/"
+    );
+    setPlayers(playersRes.data); // array of players set
+  }
+  // empty array means it will only run once
+  useEffect(() => {
+    getPlayers();
+  }, []);
 
 
-    // Load all players -> then pass players to the playerList
-    async function getPlayers() {
-        const playersRes = await axios.get(
-          "https://sports-app.herokuapp.com/playerBirthday/"
-        );
-        setPlayers(playersRes.data); // array of players set
-    }
-     
-    // empty array means it will only run once
-    useEffect(() => {
-        getPlayers();
-    }, [])
+  const SportSelectDropdown = (event) => {
+    setSport(event.target.value);
+  };
 
-     const SportSelectDropdown = (event) => {
-       setSport(event.target.value);
-     };
-
-     const BirthdayToleranceHandler = (event) => {
-       setToleranceDays(event.target.value);
-     };
-
+  const BirthdayToleranceHandler = (event) => {
+    setToleranceDays(event.target.value);
+  };
 
   return (
     <div>
@@ -69,6 +66,7 @@ export default function Players() {
             targetSport={sport}
             birthdayToleranceInDays={toleranceDays}
             injuryStatus={"Healthy"}
+            injuryStatusTwo={"Day-To-Day"}
           />
         </div>
       </Container>
