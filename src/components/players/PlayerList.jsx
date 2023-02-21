@@ -6,7 +6,10 @@ import Card from "react-bootstrap/Card";
 // import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
-
+// import Container from "react-bootstrap/esm/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import "../../App.css";
 
 
 export default function PlayerList({
@@ -54,7 +57,7 @@ export default function PlayerList({
 
     return SportsPlayersHealthy.map((player, i) => {
       return (
-        <div class="">
+        <div className="player-item">
           {player.Sport === "basketball" && (
             <Card key={i} style={{ width: "18rem" }} className="text-center">
               <Card.Title>{player.Player}</Card.Title>
@@ -65,6 +68,7 @@ export default function PlayerList({
                 <Card.Text>Birthday: {player.Birthday}</Card.Text>
                 <Card.Text>GameDay: {player.GameDay}</Card.Text>
                 <Card.Text>Injury Status: {player.InjuryStatus}</Card.Text>
+                <Card.Text>key: {i}</Card.Text>
 
                 <Button
                   onClick={() => {
@@ -251,5 +255,5 @@ export default function PlayerList({
     });
   }
 
-  return <div>{renderWeekOfGamePlayers()}</div>;
+  return <div className="flex-container">{renderWeekOfGamePlayers()}</div>;
 }

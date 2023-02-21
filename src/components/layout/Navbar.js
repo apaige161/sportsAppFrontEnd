@@ -15,10 +15,11 @@ export default function NavbarComponent() {
   const { loggedIn } = useContext(AuthContext);
 
   return (
-    <>
+    <div >
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">Picante Picks</Navbar.Brand>
+          <LogoutBtn />
         </Container>
       </Navbar>
       <Navbar bg="dark" variant="dark">
@@ -69,47 +70,8 @@ export default function NavbarComponent() {
             )}
           </Nav>
         </Container>
-        <LogoutBtn />
       </Navbar>
+    </div>
 
-      {/* // affiliate link */}
-
-      {/* <Navbar bg="dark" variant="dark" classname="text-center">
-        <Container>
-          <Nav.Link as={Link} to="https://www.fanduel.com/">
-            <img
-              alt="FanDuel shield"
-              src="https://s3.amazonaws.com/cdn.fanduel.com/images/2019/Homepage/Home/fd-shield-logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top text-center"
-            />{" "}
-          </Nav.Link>
-          <Nav.Link as={Link} to="https://www.draftkings.com/">
-            <img
-              alt=""
-              src="https://d2tjpz01y5bfgl.cloudfront.net/favicon.ico"
-              width="30"
-              height="30"
-              className="d-inline-block align-top text-center"
-            />{" "}
-          </Nav.Link>
-          
-        </Container>
-      </Navbar> */}
-    </>
-
-    /* // <>
-    //   <Navbar bg="dark" variant="dark">
-    //     <Container>
-    //       <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    //       <Nav className="me-auto">
-    //         <Nav.Link href="#home">Home</Nav.Link>
-    //         <Nav.Link href="#features">Features</Nav.Link>
-    //         <Nav.Link href="#pricing">Pricing</Nav.Link>
-    //       </Nav>
-    //     </Container>
-    //   </Navbar>
-    // </> */
   );
 }

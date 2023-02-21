@@ -1,0 +1,31 @@
+
+
+
+/* Birthday Section */
+.main-container {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+#birthday-header {
+    min-width: 100%;
+    max-width: 85%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center
+}
+
+.birthday-header-child {
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.player-item {
+    padding-bottom: 2%;
+}

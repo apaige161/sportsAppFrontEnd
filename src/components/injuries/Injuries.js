@@ -8,7 +8,7 @@ export default function PlayerInjury() {
 
     const [players, setPlayers] = useState([]);
     const [sport, setSport] = useState("basketball");
-    const [team, setTeam] = useState("");
+    // const [team, setTeam] = useState("");
 
     // Load all players that are injured -> then pass players to the playerList
     async function getPlayerReport() {
@@ -30,14 +30,14 @@ export default function PlayerInjury() {
     // get all teams
 
 
-    const TeamSelectDropdown = (event) => {
-      setTeam(event.target.value);
-    };
+    // const TeamSelectDropdown = (event) => {
+    //   setTeam(event.target.value);
+    // };
 
 
   return (
-    <div>
-      <Container class="d-flex justify-content-center">
+    <div className="main-container">
+      <Container fluid>
         <h2>Injury Report</h2>
         <div>
           <label>
@@ -52,7 +52,7 @@ export default function PlayerInjury() {
         <InjuryPlayerList
           players={players}
           targetSport={sport}
-          targetTeam={team}
+          // targetTeam={team}
         />
       </Container>
     </div>

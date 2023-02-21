@@ -27,7 +27,7 @@ export default function Tickets() {
 
   return (
     <div>
-      <Container class="d-flex justify-content-center">
+      <Container className="d-flex justify-content-center">
         <LotteryTicketList tickets={tickets} />
       </Container>
     </div>

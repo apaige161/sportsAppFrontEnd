@@ -21,7 +21,7 @@ export default function LotteryTicketList({ tickets }) {
   }
 
   return (
-    <div class="d-flex justify-content-center">
+    <div className="d-flex justify-content-center">
       <div>{renderTickets()}</div>
     </div>
   );

@@ -2,9 +2,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 import PlayerList from './PlayerList';
+import '../../App.css'
 
 import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
+
 
 // import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
@@ -39,9 +41,9 @@ export default function Players() {
   };
 
   return (
-    <div>
-      <Container class="d-flex justify-content-center">
-        <div>
+    <div className="main-container">
+      <div id="birthday-header">
+        <div className="birthday-header-child">
           <label>
             <select value={sport} onChange={SportSelectDropdown}>
               <option value="football">Football</option>
@@ -50,8 +52,12 @@ export default function Players() {
             </select>
           </label>
         </div>
-        <div>
+
+        <div className="birthday-header-child">
           <h4>Choose days of tolerance around a player's birthday</h4>
+        </div>
+
+        <div className="birthday-header-child">
           <Form.Range
             onChange={BirthdayToleranceHandler}
             step={1}
@@ -60,16 +66,17 @@ export default function Players() {
           />
           <p>Range (+/-) {toleranceDays} days</p>
         </div>
-        <div>
-          <PlayerList
-            players={players}
-            targetSport={sport}
-            birthdayToleranceInDays={toleranceDays}
-            injuryStatus={"Healthy"}
-            injuryStatusTwo={"Day-To-Day"}
-          />
-        </div>
-      </Container>
+      </div>
+
+      <div>
+        <PlayerList
+          players={players}
+          targetSport={sport}
+          birthdayToleranceInDays={toleranceDays}
+          injuryStatus={"Healthy"}
+          injuryStatusTwo={"Day-To-Day"}
+        />
+      </div>
     </div>
   );
 }

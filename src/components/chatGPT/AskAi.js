@@ -29,7 +29,7 @@ export default function AskAi() {
 
     return (
       <div>
-        <Container class="d-flex justify-content-center">
+        <Container className="d-flex justify-content-center">
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
               <Form.Label>Ask AI</Form.Label>
