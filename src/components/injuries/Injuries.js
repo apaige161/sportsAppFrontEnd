@@ -27,19 +27,11 @@ export default function PlayerInjury() {
       setSport(event.target.value);
     };
 
-    // get all teams
-
-
-    // const TeamSelectDropdown = (event) => {
-    //   setTeam(event.target.value);
-    // };
-
 
   return (
     <div className="main-container">
-      <Container fluid>
+      <div id="injury-header">
         <h2>Injury Report</h2>
-        <div>
           <label>
             <select value={sport} onChange={SportSelectDropdown}>
               <option value="football">Football</option>
@@ -47,14 +39,13 @@ export default function PlayerInjury() {
               <option value="hockey">Hockey</option>
             </select>
           </label>
-        </div>
+      </div>
 
-        <InjuryPlayerList
-          players={players}
-          targetSport={sport}
-          // targetTeam={team}
-        />
-      </Container>
+      <InjuryPlayerList
+        players={players}
+        targetSport={sport}
+        // targetTeam={team}
+      />
     </div>
   );
 }

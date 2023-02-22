@@ -14,7 +14,6 @@ import Tickets from './components/lottery/lotteryTickets';
 
 
 
-
 export default function Router() {
 
   const { loggedIn } = useContext(AuthContext);

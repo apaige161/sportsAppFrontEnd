@@ -3,6 +3,8 @@ import {useHistory} from 'react-router-dom'
 import AuthContext from '../../Context/AuthContext';
 import axios from "axios";
 
+import Button from "react-bootstrap/Button";
+
 export default function LogoutBtn() {
 
     const { getLoggedIn } = useContext(AuthContext); 
@@ -20,8 +22,8 @@ export default function LogoutBtn() {
 
 
   return (
-    <button onClick={logout}>
-        Logout
-    </button>
-  )
+    <Button variant="primary" onClick={logout}>
+      Logout
+    </Button>
+  );
 }

@@ -1,12 +1,13 @@
 
 
 
-/* Birthday Section */
+
 .main-container {
     max-width: 85%;
     margin: 0 auto;
 }
 
+/* Birthday Section */
 #birthday-header {
     min-width: 100%;
     max-width: 85%;
@@ -20,6 +21,17 @@
     margin: 0 auto;
 }
 
+/* Injury Section */
+#injury-header {
+    min-width: 100%;
+    max-width: 85%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1% 0;
+}
+
 .flex-container {
     display: flex;
     flex-flow: row wrap;
@@ -27,5 +39,6 @@
 }
 
 .player-item {
-    padding-bottom: 2%;
+    padding: 10px;
 }
+
