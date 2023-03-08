@@ -49,6 +49,7 @@ export default function Players() {
               <option value="football">Football</option>
               <option value="basketball">Basketball</option>
               <option value="hockey">Hockey</option>
+              <option value="baseball">Baseball</option>
             </select>
           </label>
         </div>

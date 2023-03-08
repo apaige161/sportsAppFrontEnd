@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
+import Home from './components/home/home';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import NavbarComponent from "./components/layout/Navbar";
@@ -23,7 +24,7 @@ export default function Router() {
       <NavbarComponent />
       <Switch>
         <Route exact path="/">
-          <div>Home, TODO: Add Home component</div>
+          <Home />
         </Route>
         {loggedIn === false && (
           <>

@@ -1,14 +1,12 @@
-// import React from 'react'
+
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import moment from "moment";
 import Card from "react-bootstrap/Card";
-// import ListGroup from "react-bootstrap/ListGroup";
+
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
-// import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 import "../../App.css";
 
 
@@ -237,6 +235,20 @@ export default function PlayerList({
 
           {/* No Stats */}
           {player.Sport === "football" && (
+            <Card key={i} style={{ width: "18rem" }} className="text-center">
+              <Card.Title>{player.Player}</Card.Title>
+              <Card.Title>{player.Team}</Card.Title>
+              <Card.Img variant="top" src={player.PlayerImgUrl} />
+              <Card.Body>
+                <Card.Text>Position: {player.Position}</Card.Text>
+                <Card.Text>Birthday: {player.Birthday}</Card.Text>
+                <Card.Text>GameDay: {player.GameDay}</Card.Text>
+                <Card.Text>Injury Status: {player.InjuryStatus}</Card.Text>
+              </Card.Body>
+              {/* <Card.Img variant="top" src={player.TeamLogoUrl} /> */}
+            </Card>
+          )}
+          {player.Sport === "baseball" && (
             <Card key={i} style={{ width: "18rem" }} className="text-center">
               <Card.Title>{player.Player}</Card.Title>
               <Card.Title>{player.Team}</Card.Title>

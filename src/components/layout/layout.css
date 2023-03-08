@@ -33,6 +33,7 @@
 
 .navigation a:hover {
     background: #941414;
+    color: white;
 }
 
 @media all and (max-width: 800px) {
